@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+	<head>
+	    <title>SlideOut</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div ng-app="angularjs-starter" ng-controller="MainCtrl">
+					<div class="row">
+						<div class="col-md-6">
+							<button class="slideout" class="addfields" ng-click="addNewCard()">Open Contact Slideout</button>
+						</div>
+	  					<div class="col-md-6 float" >
+	  						<fieldset  data-ng-repeat="card in cards">
+	  							<form>
+						   		<h1>Contact
+						   		<button class="remove" ng-click="addUser()">X</button></h1>
+						      	<p>Name</p>
+								<input type='text' ng-model='newUser.firstname'><br>
+								<p>Surname</p>
+								<input type='text' ng-model='newUser.surname'><br>
+								<p>Message</p>
+								<textarea ng-model='newUser.message'></textarea><br>
+								 <input type='submit' value='Send' ng-click='addUser()'><br>
+								 </form>
+					   		</fieldset>
+	  					</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
